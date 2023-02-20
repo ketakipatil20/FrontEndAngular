@@ -1,0 +1,49 @@
+<form class="mt-4 p-3 rounded-3" [formGroup]="registerform">
+    <div class="row g 0">
+         <div class="col text-center p-2 mb-3 bg-light">
+             <h2>Register</h2>
+         </div>
+     </div>
+         <div class="col">
+             <label for="UserName" class="form label">UserName</label>
+             <input type="text" formControlName="UserName" class="form-control" id="UserName">
+         </div>
+         <div class="col">
+             <label for="Email" class="form label">Email Address</label>
+             <input type="text" formControlName="Email" class="form-control" id="Email">
+             <div class="form-text"></div>
+         </div>
+         <div class="col">
+             <label for="Password" class="form label">Password</label>
+             <input type="password" formControlName="Password" class="form-control" id="Password">
+             <div class="form-text"></div>
+         </div>
+     <div>
+         <div class="col">
+             <label for="Confirm Password" class="form label">Confirm Password</label>
+             <input type="password"  formControlName="ConfirmPassword" class="form-control" id="Confirm Password">
+             <div class="form-text"></div>
+         </div>
+     </div>
+     <div>
+         <div class="col">
+             <label for="Roll" class="form label">Role</label>
+             <input type="text" formControlName="Roll" class="form-control" id="Roll">
+             <div class="form-text"></div>
+         </div>
+     </div>
+     <div class="row">
+        <div class="col text-center">
+           <div class="d-grid">
+              <button type="submit" class="btn btn-primary" (click)="submitForm()">Register</button>
+           </div>
+         </div>
+     </div>
+ </form>
+ <div class="row g 0">
+     <div class="col text-center p-2 mb-3 bg-light">
+         <h5>Already a user? <a routerLink="/login" class="fs-5">Login</a></h5>
+     </div>
+ </div>
+ 
+ 

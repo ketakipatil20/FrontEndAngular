@@ -1,0 +1,25 @@
+
+<form>
+    <input type="hidden" name="country"
+[value]="service.formData.Country"/>
+<div class="form-group">
+    <label>GLOBAL GROUP ID :</label>
+    <br>
+    <input class="form-control form-control-lg" placeholder="Global Group Id"
+    name="ggid" #ggid="ngModel" [(ngModel)]="service.formData.GlobalGroupId">
+</div>
+
+<div class="form-group">
+    <label>EMPLOYEE NUMBER : </label>
+    <br>
+    <input class="form-control form-control-lg" placeholder="Employee Number"
+    name="eno" #eno="ngModel" [(ngModel)]="service.formData.EmployeeNo">
+</div>
+
+<div class="form-group">
+    <label>EMPLOYEE NAME :  </label>
+    <br>
+    <input class="form-control form-control-lg" placeholder="Employee Name"
+    name="ename" #ename="ngModel" [(ngModel)]="service.formData.Name"/>
+</div>
+</form>
