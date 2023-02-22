@@ -18,6 +18,10 @@ export class RollOffService {
     let apiurl="http://localhost:62371/RollOff";
     return this.http.get(apiurl);  // Where http is HttpClient object, get method to get the data and apiurl the variable name that contains the data. 
   }
+  getId(emplyoeeId:string){
+    let apiurl="http://localhost:62371/RollOff/"+emplyoeeId;
+    return this.http.get(apiurl);
+  }
     getRegister() {  // To fetch the data from the User.
       let apiurl="http://localhost:62371/api/[controller]";
       return this.http.get(apiurl); 

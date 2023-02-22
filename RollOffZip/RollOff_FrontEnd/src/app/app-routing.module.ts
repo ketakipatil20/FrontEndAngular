@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RollOffDetailsComponent } from './roll-off-details/roll-off-details.component';
 import { RollOffFormComponent } from './RollOffDetails/roll-off-form/roll-off-form.component';
-import { SearchComponent } from './search/search.component';
+
 
 const routes: Routes = [
   {
@@ -16,17 +16,14 @@ const routes: Routes = [
     component: RollOffDetailsComponent
   },
   {
-    path: 'roll-off-form',
+    path: 'roll-off-form/:id',
     component: RollOffFormComponent
   },
   {
     path: 'register',
     component: RegisterComponent
-  },
-  {
-    path: 'search',
-    component: SearchComponent
-  },
+  }
+  
   
 ];
 

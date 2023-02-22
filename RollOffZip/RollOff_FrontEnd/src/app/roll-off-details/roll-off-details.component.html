@@ -1,4 +1,4 @@
-<app-search (searchTextChanged="onSearchTextEntered($event)")></app-search>
+<input class="from-control" type="text" placeholder="Serach Employee" [(ngModel)]="searchText">
 <div class=" table">
 <table class="table table-striped" ngif>
     <thead>
@@ -13,8 +13,8 @@
     </thead>
     <tbody>
       
-      <tr *ngFor='let n_data of newdata
-      | paginate
+      <tr *ngFor='let n_data of newdata 
+      | search: searchText | paginate
       : {
           itemsPerPage: tableSize,
           currentPage: page,
@@ -28,7 +28,8 @@
         <td>{{n_data.name}}</td>
         <td>{{n_data.email}}</td>
         <td>
-          <a  type="button" class="btn btn-primary" href="roll-off-form">Roll Off Request</a>
+          <a  type="button" class="btn btn-primary" [routerLink]="['/roll-off-form', n_data.globalGroupId]">Roll Off Request</a>
+
           </td>
           <td></td>
           

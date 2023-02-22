@@ -25,19 +25,13 @@ export class RollOffDetailsComponent {
     this.page = event;
     this.apiservice.getAPI().subscribe(res=>{this.newdata=res;})
   }
-  serachText:string = "";
-
-
-
-  onTableSizeChange(event: any): void {
+  
+onTableSizeChange(event: any): void {
     this.tableSize = event.target.value;
     this.page = 1;
     this.apiservice.getAPI().subscribe(res=>{this.newdata=res;})
   }
 
-  onSearchTextEntered(searchValue:string){
-    this.serachText = searchValue;
-    //console.log(this.serachText)
-     
-  }
+  searchText = '';
 }
+
